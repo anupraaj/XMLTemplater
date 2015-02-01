@@ -269,7 +269,7 @@
                                                 continue;
                                             }
                                             var idxeq = value.indexOf('=');
-                                            var idxsc = value.indexOf(':');
+                                            var idxsc = value.indexOf('|');
                                             var idx = idxeq > 0 && idxsc > 0 ? Math.min(idxeq, idxsc) : (idxeq > 0 ? idxeq
                                                     : (idxsc > 0 ? idxsc : -1));
                                             if (idx <= 0) {

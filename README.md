@@ -93,19 +93,19 @@ As said before, the XML document is case-sensitive. Also the attributes are case
 the xml-attribute directive will insert a proper case sensitive attribute. Both attribute name and value
 may be given.
 
-The directive takes ':' or '=' as a separator between the name:
+The directive takes '|' or '=' as a separator between the name, in order to be able to process xml namespace. Therefore
 
-    <data xml-attribute="attributeUppercase:{{exampleAttribute}}"></data>
+    <data xml-attribute="nspc:attributeUppercase={{exampleAttribute}}"></data>
     
 will transform to:
 
-    <data attributeUppercase="_value_of_$scope.exampleAttribute_"></data>
+    <data nspc:attributeUppercase="_value_of_$scope.exampleAttribute_"></data>
     
 So, a complete html pseudo-template, will take a form of:
 
     <xml version="1.0" encoding="UTF-8">
         <rowlist xml-element="rowList">
-            <data xml-attribute="attributeUppercase:{{exampleAttribute}}"></data>
+            <data xml-attribute="attributeUppercase={{exampleAttribute}}"></data>
             <row ng-repeat-start="row in rows">
                  <cell no="1">{{row.name}}</cell>
             </row>
@@ -153,7 +153,7 @@ A complete "xmltemplate.html" may look like this:
   <div>
 	<xml version="1.0" encoding="UTF-8">
         <rowList xml-element="rowList">
-            <data xml-attribute="attribute:{{exampleAttribute}}"></data>
+            <data xml-attribute="attribute={{exampleAttribute}}"></data>
             <row ng-repeat-start="row in rows">
                  <cell no="1">{{row.name}}</cell>
             </row>
@@ -172,7 +172,7 @@ and sometimes it may be useful to have multiple XML templates packed inside:
   <div>
 	<xml xml-scope="rows" version="1.0" encoding="UTF-8">
 	    <rowList xml-element="rowList">
-	        <data xml-attribute="attribute:{{exampleAttribute}}"></data>
+	        <data xml-attribute="attribute={{exampleAttribute}}"></data>
 	        <row ng-repeat-start="row in rows">
 	             <cell no="1">{{row.name}}</cell>
 	        </row>
@@ -183,7 +183,7 @@ and sometimes it may be useful to have multiple XML templates packed inside:
 	</xml>
 	<xml version="1.0" encoding="UTF-8">
         <rowList xml-element="rowList">
-            <data xml-attribute="attribute:{{exampleAttribute}}"></data>
+            <data xml-attribute="attribute={{exampleAttribute}}"></data>
             <row ng-repeat-start="row in rows">
                  <cell no="1">{{row.name}}</cell>
             </row>
@@ -194,7 +194,7 @@ and sometimes it may be useful to have multiple XML templates packed inside:
     </xml>
     <xml xml-scope="rows,exampleAttribute" version="1.0" encoding="UTF-8">
         <rowList>
-            <data xml-attribute="attribute:{{exampleAttribute}}"></data>
+            <data xml-attribute="attribute={{exampleAttribute}}"></data>
             <row ng-repeat-start="row in rows">
                  <cell no="1">{{row.name}}</cell>
             </row>
