@@ -145,7 +145,7 @@ Please note the display:none property - without it, the generated "something" wo
 
 A complete "xmltemplate.html" may look like this:
 
-  <div>
+  "<div>
 	<xml version="1.0" encoding="UTF-8">
         <rowList xml-element="rowList">
             <data xml-attribute="attribute:{{exampleAttribute}}"></data>
@@ -157,12 +157,12 @@ A complete "xmltemplate.html" may look like this:
             </row>
         </rowList>
     </xml>
-  </div>
+  </div>"
   
 The "xml" is wrapped inside a div element - Angular templates may have only one root element,
 and sometimes it may be useful to have multiple XML templates packed inside:
 
-  <div>
+  "<div>
 	<xml xml-scope="rows" version="1.0" encoding="UTF-8">
 	    <rowList xml-element="rowList">
 	        <data xml-attribute="attribute:{{exampleAttribute}}"></data>
@@ -196,7 +196,7 @@ and sometimes it may be useful to have multiple XML templates packed inside:
             </row>
         </rowList>
     </xml>
-  </div>
+  </div>"
 
 ### Final touch: getting the XML
 
