@@ -82,6 +82,7 @@ in lowercase. The xml-element directive will replace the element it is inside of
     <div xml-element="SOMETHING"></DIV>
     
 will transform to:
+
     <SOMETHING></SOMETHING>
     
 #### xml-attribute
