@@ -79,10 +79,10 @@ will transform to:
 The XML document has case-sensitive tags. On the contrary, HTML tags are case-insensitive and mostly
 in lowercase. The xml-element directive will replace the element it is inside of with the name given.
 
-    <div xml-element="HEAD"></DIV>
+    <div xml-element="SOMETHING"></DIV>
     
 will transform to:
-    <HEAD></HEAD>
+    <SOMETHING></SOMETHING>
     
 #### xml-attribute
 
