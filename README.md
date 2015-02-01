@@ -79,7 +79,9 @@ will transform to:
 The XML document has case-sensitive tags. On the contrary, HTML tags are case-insensitive and mostly
 in lowercase. The xml-element directive will replace the element it is inside of with the name given.
 
-    <div xml-element="SOMETHING"></DIV>
+```HTML
+    <div xml-element="SOMETHING"></div>
+```
     
 will transform to:
 
@@ -136,8 +138,10 @@ The directive then may take a form of:
 
 And the HTML code inside the application webpage will be:
 
+```HTML
     <div id="xmldocument" style="display: none;" xml-template>
     </div>
+```
     
 Please note the display:none property - without it, the generated "something" would be visible on Your page !
 
@@ -145,7 +149,8 @@ Please note the display:none property - without it, the generated "something" wo
 
 A complete "xmltemplate.html" may look like this:
 
-  "<div>
+```HTML
+  <div>
 	<xml version="1.0" encoding="UTF-8">
         <rowList xml-element="rowList">
             <data xml-attribute="attribute:{{exampleAttribute}}"></data>
@@ -157,12 +162,14 @@ A complete "xmltemplate.html" may look like this:
             </row>
         </rowList>
     </xml>
-  </div>"
+  </div>
+```
   
 The "xml" is wrapped inside a div element - Angular templates may have only one root element,
 and sometimes it may be useful to have multiple XML templates packed inside:
 
-  "<div>
+```HTML
+  <div>
 	<xml xml-scope="rows" version="1.0" encoding="UTF-8">
 	    <rowList xml-element="rowList">
 	        <data xml-attribute="attribute:{{exampleAttribute}}"></data>
@@ -196,7 +203,8 @@ and sometimes it may be useful to have multiple XML templates packed inside:
             </row>
         </rowList>
     </xml>
-  </div>"
+  </div>
+```
 
 ### Final touch: getting the XML
 
