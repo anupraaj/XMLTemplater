@@ -1,0 +1,40 @@
+<div>
+	<xml xml-scope="rows" version="1.0" encoding="UTF-8">
+	    <rowList xml-element="rowList">
+	        <data xml-attribute="attribute:{{exampleAttribute}}">
+	        </data>
+	        <row ng-repeat-start="row in rows">
+	             <cell no="1">{{row.name}}</cell>
+	        </row>
+	        <row ng-repeat-end>
+	             <cell no="1">{{row.value}}</cell>
+	        </row>
+	    </rowList>
+	</xml>
+	<xml version="1.0" encoding="UTF-8">
+        <rowList xml-element="rowList">
+            <data xml-attribute="attribute:{{exampleAttribute}}">
+            </data>
+            <row ng-repeat-start="row in rows">
+                 <cell no="1">{{row.name}}</cell>
+            </row>
+            <row ng-repeat-end>
+                 <cell no="1">{{row.value}}</cell>
+            </row>
+        </rowList>
+    </xml>
+    <xml xml-scope="rows,exampleAttribute" version="1.0" encoding="UTF-8">
+        <rowList>
+            <data xml-attribute="attribute:{{exampleAttribute}}">
+            </data>
+            <row ng-repeat-start="row in rows">
+                 <cell no="1">{{row.name}}</cell>
+            </row>
+            <row ng-repeat-end>
+                 <cell no="1">{{row.value}}</cell>
+            </row>
+        </rowList>
+    </xml>
+</div>
+
+

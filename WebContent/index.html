@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en" class="no-js" ng-app="XmlTemplater">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>XML TEMPLATES</title>
+        <meta name="description" content="">
+        <script type="text/javascript" src="angular/angular.min.js"></script>
+        <script type="text/javascript" src="xmltemplater/xmltemplater.js"></script>
+        <script type="text/javascript" src="app.js"></script>
+        
+    </head>
+    <body class="WhiteBackground" ng-controller="MainController">
+        <span> Watch the XML content below :</span>
+        <input type="button" ng-click="show()" value="SHOW XML"/>
+        <input type="button" ng-click="show2()" value="SHOW RAW XML"/>
+        <div id="xmldocument" style="display: none;" print-service>
+        </div>
+    </body>
+</html>
