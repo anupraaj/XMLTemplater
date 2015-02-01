@@ -98,7 +98,7 @@
                 }
                 xmls.push(xml);
             }
-            return xmls;
+            return xmls.length == 1 ? xmls[0] : xmls;
         };
         helper.getXML = function(id) {
             var element = typeof id == "string" ? document.getElementById(id) : id;

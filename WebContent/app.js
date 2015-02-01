@@ -8,7 +8,7 @@ var app = angular.module('XmlTemplater', [ 'xml-templater' ]);
 /**
  * A helpful directive to include external template
  */
-app.directive('printService', function() {
+app.directive('xmlTemplate', function() {
     return {
         restrict : 'A',
         scope : false,
@@ -19,7 +19,7 @@ app.directive('printService', function() {
     }
 });
 
-app.controller('MainController', [ '$scope', 'xml-helper', function($scope, xmlHelper) {
+app.controller('myController', [ '$scope', 'xml-helper', function($scope, xmlHelper) {
     $scope.exampleAttribute = "ExAttr";
     $scope.rows = [];
     $scope.rows.push({
